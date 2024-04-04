@@ -1,0 +1,298 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+   overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+}
+
+/* Site Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+}
+
+.header-title {
+    font-size: 1.5em;
+}
+
+/* Navigation */
+.navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    padding: 0 1em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon-label {
+    font-size: 1.5em; /* Adjusted to be consistent */
+    cursor: pointer;
+    display: none; /* Hidden by default, shown only on mobile */
+}
+
+/* Submenu */
+.submenu {
+    display: none !important;
+}
+.menu-item-has-children:hover .submenu {
+    display: block !important;
+    position: absolute;
+    top: 40px !important;
+    background-color: #444;
+}
+
+.menu-item-has-children:hover .submenu li {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+/* Checkbox for Menu Toggle - hidden */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Toggle Menu Display */
+    .navigation {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+    .navigation .menu {
+        flex-direction: column;
+        display: none; /* Menu hidden on mobile */
+    }
+
+    .menu-toggle:checked ~ .navigation .menu {
+        display: flex; /* Show menu when hamburger icon is clicked */
+    }
+    ul.menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 30px;
+        background: black;
+        /* text-align: left; */
+    }
+
+    /* Display the Hamburger Icon */
+    .menu-icon-label {
+        display: block;
+    }
+
+    /* Adjust Menu Items for Mobile */
+    .navigation li {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    /* Submenu Adjustments for Mobile */
+    .menu-item-has-children .submenu {
+        position: static;
+        width: 100%;
+        display: none; /* Submenu hidden on mobile */
+    }
+
+    .menu-item-has-children:hover .submenu,
+    .menu-item-has-children:focus-within .submenu {
+        display: block;
+    }
+
+    .menu-item-has-children .submenu li {
+        padding-left: 20px; /* Indent submenu items */
+        text-align: left;
+    }
+
+
+    
+}
+
+/* Other styles... */
+
+
+/* Banner */
+.banner {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-bottom:30px;
+}
+
+.banner h1 {
+    margin-top: 0.5em;
+    font-size: 2.5em;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 625px;
+    object-fit: cover;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+    max-width: 1400px;
+}
+
+.container #blogs     {
+    width: 68% !important;
+}
+
+.container #about {
+    width: 28% !important;
+}
+
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#blog article {
+    flex: 1;
+    margin: 10px;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+} 
+#blog article h2 {
+    color: #333;
+}
+#blog article p {
+    color: #666;
+}
+ p {
+    margin: 15px 0px;
+}
+#blog article a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#mailing-list form input[type="email"] {
+    padding: 10px 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+#blogs h2{
+    margin-left:15px ;
+}
+#blog a:hover {
+    color: #c1c1c1;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #333;
+}
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #banner img {
+        max-height: 300px;
+    }
+    .banner h1 {
+        font-size: 20px;
+    }
+    .container {
+        display: block;
+        width: 300px !important;
+        flex-direction: column;
+        margin: 0px;
+    }
+    main section {
+        width: 100%;
+    }
+    .container #blogs {
+        width: 100% !important;
+    }
+    .container #about {
+        width: 100% !important;
+        padding: 0px 18px;
+    }
+    #blog {
+        display: block;
+    }
+
+    #blog article {
+        /* width: 300px; */
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    form {
+        width: 100%;
+    }
+    #mailing-list form input[type="email"] {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    footer {
+        padding: 10px 0;
+    }
+    footer a {
+        margin: 0px 5px;
+    }
+
+}

@@ -253,8 +253,7 @@ footer a {
         font-size: 20px;
     }
     .container {
-        display: block;
-        width: 300px !important;
+    
         flex-direction: column;
         margin: 0px;
     }

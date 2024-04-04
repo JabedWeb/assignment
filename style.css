@@ -79,6 +79,7 @@ img {
         width: 100%;
     }
     .navigation .menu {
+        padding: 0px 20px;
         flex-direction: column;
         display: none; /* Menu hidden on mobile */
     }
@@ -255,7 +256,7 @@ footer a {
     .container {
     
         flex-direction: column;
-        margin: 0px;
+        margin: 40px 0px;
     }
     main section {
         width: 100%;
